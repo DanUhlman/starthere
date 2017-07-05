@@ -1,0 +1,1014 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     37673,       1006]
+NotebookOptionsPosition[     31141,        851]
+NotebookOutlinePosition[     31514,        867]
+CellTagsIndexPosition[     31471,        864]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Trig Derivatives", "Title",
+ CellChangeTimes->{{3.7077422134436846`*^9, 
+  3.7077422172650523`*^9}},ExpressionUUID->"d8d974cf-0831-420f-a764-\
+5390d7af7e4e"],
+
+Cell[CellGroupData[{
+
+Cell["Derivative of Sine", "Section",
+ CellChangeTimes->{{3.7077422262964582`*^9, 
+  3.707742228914337*^9}},ExpressionUUID->"62d0170c-cbab-4ad8-9a21-\
+aedcc0a5048e"],
+
+Cell[TextData[{
+ "Drag the slider below. The green point shows the value of the derivative of \
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{"sin", "(", "x", ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "b7066c6b-6228-4edc-9b2a-c82682eceb29"],
+ ", the slope of the tangent line to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "41b5ea38-906f-4dfb-9c79-1d3653743080"],
+ "."
+}], "Item",
+ CellChangeTimes->{{3.7077440002741466`*^9, 3.707744002675873*^9}, {
+   3.707744081532117*^9, 3.7077440829329395`*^9}, {3.7077441386686373`*^9, 
+   3.7077441560012817`*^9}, {3.7077441885068126`*^9, 3.707744202845146*^9}, {
+   3.707744620472908*^9, 3.707744655969117*^9}, 
+   3.707744758483766*^9},ExpressionUUID->"779f6d47-3e76-452f-adbd-\
+79705dae820c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  RowBox[{"Sin", "[", "x", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tangent", "[", 
+   RowBox[{"f_", ",", "x0_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "'"}], "[", "x0", "]"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"x", "-", "x0"}], ")"}]}], "+", 
+   RowBox[{"f", "[", "x0", "]"}]}]}], "\n", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f", "[", "x", "]"}], ",", 
+       RowBox[{"tangent", "[", 
+        RowBox[{"f", ",", "p", ",", "x"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", 
+       RowBox[{"2", " ", "\[Pi]"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"2", " ", "\[Pi]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "3"}], ",", "3"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"Epilog", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", 
+        RowBox[{"PointSize", "[", ".015", "]"}], ",", 
+        RowBox[{"Point", "@", 
+         RowBox[{"{", 
+          RowBox[{"p", ",", 
+           RowBox[{"f", "[", "p", "]"}]}], "}"}]}], ",", 
+        RowBox[{"Darker", "[", "Green", "]"}], ",", 
+        RowBox[{"PointSize", "[", ".03", "]"}], ",", 
+        RowBox[{"Point", "@", 
+         RowBox[{"{", 
+          RowBox[{"p", ",", 
+           RowBox[{
+            RowBox[{"f", "'"}], "[", "p", "]"}]}], "}"}]}]}], "}"}]}]}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"p", ",", "0", ",", 
+     RowBox[{"2", " ", "\[Pi]"}]}], "}"}], ",", "\"\<f(x) = sin(x)\>\"", ",", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7077436888971925`*^9, 3.707743688905196*^9}, {
+  3.707743722153884*^9, 3.707743723225298*^9}, {3.707743850054506*^9, 
+  3.7077439665670185`*^9}, {3.707744217145404*^9, 3.7077442338907847`*^9}, {
+  3.7077452749911036`*^9, 3.707745281432915*^9}, {3.7077500842955437`*^9, 
+  3.707750115136279*^9}},ExpressionUUID->"15776b8e-8fa3-4522-9adb-\
+b1a4766d0d2f"],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`p$$ = 0, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{
+        Hold[$CellContext`p$$], 0, 2 Pi}, {
+        Hold["f(x) = sin(x)"], Manipulate`Dump`ThisIsNotAControl}}, 
+      Typeset`size$$ = {720., {219., 230.}}, Typeset`update$$ = 0, 
+      Typeset`initDone$$, Typeset`skipInitDone$$ = 
+      False, $CellContext`p$13822$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, "Variables" :> {$CellContext`p$$ = 0}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`p$$, $CellContext`p$13822$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Plot[{
+           $CellContext`f[$CellContext`x], 
+           $CellContext`tangent[$CellContext`f, $CellContext`p$$, \
+$CellContext`x]}, {$CellContext`x, 0, 2 Pi}, 
+          PlotRange -> {{0, 2 Pi}, {-3, 3}}, Epilog -> {Red, 
+            PointSize[0.015], 
+            Point[{$CellContext`p$$, 
+              $CellContext`f[$CellContext`p$$]}], 
+            Darker[Green], 
+            PointSize[0.03], 
+            Point[{$CellContext`p$$, 
+              Derivative[1][$CellContext`f][$CellContext`p$$]}]}], 
+        "Specifications" :> {{$CellContext`p$$, 0, 2 Pi}, "f(x) = sin(x)"}, 
+        "Options" :> {}, "DefaultOptions" :> {}],
+       ImageSizeCache->{810., {321., 334.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      Initialization:>({$CellContext`f[
+           Pattern[$CellContext`x, 
+            Blank[]]] := Sin[$CellContext`x], $CellContext`tangent[
+           Pattern[$CellContext`f, 
+            Blank[]], 
+           Pattern[$CellContext`x0, 
+            Blank[]], 
+           Pattern[$CellContext`x, 
+            Blank[]]] := 
+         Derivative[
+            1][$CellContext`f][$CellContext`x0] ($CellContext`x - \
+$CellContext`x0) + $CellContext`f[$CellContext`x0], 
+         Attributes[Derivative] = {NHoldAll, ReadProtected}}; 
+       Typeset`initDone$$ = True),
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.707743714283327*^9, 3.7077437248384204`*^9}, 
+   3.707743915497407*^9, 3.707743967642782*^9, 3.707744234953541*^9, 
+   3.707745282098406*^9, 3.7077500890268793`*^9, 3.7077501393487077`*^9, 
+   3.7082546583485346`*^9},ExpressionUUID->"1c49e6b4-06e4-43e0-a486-\
+6a07d120bc89"]
+}, {2}]],
+
+Cell[TextData[{
+ "Notice the path of the green point. This is the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sin", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c5036171-e0a0-47e2-b6b0-75a59046d9a2"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.707744778339681*^9, 
+  3.70774487188846*^9}},ExpressionUUID->"b163012c-f6dc-4b4e-b2d0-\
+bbd5e656c87b"],
+
+Cell[TextData[{
+ "This path is a graph that you are familiar with. What is the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sin", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "0db470ff-15c0-454b-b251-f5cab92c0f41"],
+ "?"
+}], "Item",
+ CellChangeTimes->{{3.7077448935331945`*^9, 3.7077449114222827`*^9}, {
+  3.707744998100547*^9, 
+  3.7077450294969587`*^9}},ExpressionUUID->"f305592b-6e43-432a-88f6-\
+be2285a7fd79"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.707471736131372*^9, 3.707471738196842*^9}, 
+   3.707563474514537*^9, 3.7076509483003273`*^9, {3.7076633738290925`*^9, 
+   3.707663374056226*^9}, {3.7076701888812675`*^9, 3.7076701890583925`*^9}},
+ Background->RGBColor[
+  1, 1, 0.85],ExpressionUUID->"214aba72-8b16-4f64-8a45-e1df6c21444f"],
+
+Cell["Use Mathematica to confirm your answer:", "Item",
+ CellChangeTimes->{{3.707745062348538*^9, 
+  3.7077450857467546`*^9}},ExpressionUUID->"c0ed67e5-e816-4b71-a7f1-\
+d27a38bcaefc"],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.7077366414540424`*^9, 3.7077368472616377`*^9, 3.7077394489730177`*^9, {
+   3.707739546599411*^9, 3.707739571401985*^9}, 3.7077421778671217`*^9, {
+   3.707745925231592*^9, 3.7077459348378105`*^9}},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"90c314a6-e225-4c4a-b991-fe2a5f56faf2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Derivative of Cosine", "Section",
+ CellChangeTimes->{{3.7077451859194503`*^9, 
+  3.7077451906197643`*^9}},ExpressionUUID->"152833cd-5811-4df9-b735-\
+c296c5db9d11"],
+
+Cell[TextData[{
+ "Drag the slider below. The green point shows the value of the derivative of \
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", "x", ")"}], "=", 
+    RowBox[{"cos", "(", "x", ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "24929d2b-820c-47b7-8dd6-1fce8b159d92"],
+ ", the slope of the tangent line to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"g", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "07905cf2-2160-4fcb-8f9b-f57f1cf87567"],
+ "."
+}], "Item",
+ CellChangeTimes->{{3.7077440002741466`*^9, 3.707744002675873*^9}, {
+   3.707744081532117*^9, 3.7077440829329395`*^9}, {3.7077441386686373`*^9, 
+   3.7077441560012817`*^9}, {3.7077441885068126`*^9, 3.707744202845146*^9}, {
+   3.707744620472908*^9, 3.707744655969117*^9}, 3.707744758483766*^9, {
+   3.70774521229838*^9, 
+   3.7077452318172345`*^9}},ExpressionUUID->"0385581a-1d85-41a4-8cef-\
+3b204a1fe9e6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"g", "[", "x_", "]"}], ":=", 
+  RowBox[{"Cos", "[", "x", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tangent", "[", 
+   RowBox[{"g_", ",", "x0_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"g", "'"}], "[", "x0", "]"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"x", "-", "x0"}], ")"}]}], "+", 
+   RowBox[{"g", "[", "x0", "]"}]}]}], "\n", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"g", "[", "x", "]"}], ",", 
+       RowBox[{"tangent", "[", 
+        RowBox[{"g", ",", "p", ",", "x"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", 
+       RowBox[{"2", " ", "\[Pi]"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{"2", " ", "\[Pi]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "3"}], ",", "3"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"Epilog", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", 
+        RowBox[{"PointSize", "[", ".015", "]"}], ",", 
+        RowBox[{"Point", "@", 
+         RowBox[{"{", 
+          RowBox[{"p", ",", 
+           RowBox[{"g", "[", "p", "]"}]}], "}"}]}], ",", 
+        RowBox[{"Darker", "[", "Green", "]"}], ",", 
+        RowBox[{"PointSize", "[", ".03", "]"}], ",", 
+        RowBox[{"Point", "@", 
+         RowBox[{"{", 
+          RowBox[{"p", ",", 
+           RowBox[{
+            RowBox[{"g", "'"}], "[", "p", "]"}]}], "}"}]}]}], "}"}]}]}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"p", ",", "0", ",", 
+     RowBox[{"2", " ", "\[Pi]"}]}], "}"}], ",", "\"\<g(x) = cos(x)\>\"", ",", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7077436888971925`*^9, 3.707743688905196*^9}, {
+  3.707743722153884*^9, 3.707743723225298*^9}, {3.707743850054506*^9, 
+  3.7077439665670185`*^9}, {3.707744217145404*^9, 3.7077442338907847`*^9}, {
+  3.7077451305147867`*^9, 3.707745149812269*^9}, {3.7077452407409344`*^9, 
+  3.7077452654707937`*^9}, {3.7077501560996175`*^9, 3.707750160993142*^9}, {
+  3.708254590649086*^9, 
+  3.708254631952194*^9}},ExpressionUUID->"f5c24511-5fb6-4603-b1d6-\
+abe9d05619c0"],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   FormBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`p$$ = 0, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{
+        Hold[$CellContext`p$$], 0, 2 Pi}, {
+        Hold["g(x) = cos(x)"], Manipulate`Dump`ThisIsNotAControl}}, 
+      Typeset`size$$ = {720., {219., 230.}}, Typeset`update$$ = 0, 
+      Typeset`initDone$$, Typeset`skipInitDone$$ = 
+      False, $CellContext`p$11739$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, TraditionalForm, "Variables" :> {$CellContext`p$$ = 0}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`p$$, $CellContext`p$11739$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Plot[{
+           $CellContext`g[$CellContext`x], 
+           $CellContext`tangent[$CellContext`g, $CellContext`p$$, \
+$CellContext`x]}, {$CellContext`x, 0, 2 Pi}, 
+          PlotRange -> {{0, 2 Pi}, {-3, 3}}, Epilog -> {Red, 
+            PointSize[0.015], 
+            Point[{$CellContext`p$$, 
+              $CellContext`g[$CellContext`p$$]}], 
+            Darker[Green], 
+            PointSize[0.03], 
+            Point[{$CellContext`p$$, 
+              Derivative[1][$CellContext`g][$CellContext`p$$]}]}], 
+        "Specifications" :> {{$CellContext`p$$, 0, 2 Pi}, "g(x) = cos(x)"}, 
+        "Options" :> {}, "DefaultOptions" :> {}],
+       ImageSizeCache->{810., {320., 333.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      Initialization:>({$CellContext`g[
+           Pattern[$CellContext`x, 
+            Blank[]]] := Cos[$CellContext`x], $CellContext`tangent[
+           Pattern[$CellContext`g, 
+            Blank[]], 
+           Pattern[$CellContext`x0, 
+            Blank[]], 
+           Pattern[$CellContext`x, 
+            Blank[]]] := 
+         Derivative[
+            1][$CellContext`g][$CellContext`x0] ($CellContext`x - \
+$CellContext`x0) + $CellContext`g[$CellContext`x0], 
+         Attributes[Derivative] = {NHoldAll, ReadProtected}}; 
+       Typeset`initDone$$ = True),
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    TraditionalForm],
+   Manipulate`InterpretManipulate[1]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.7077451514724646`*^9, {3.707745243221175*^9, 3.707745266013152*^9}, 
+   3.7077501630543823`*^9, 
+   3.7082546363899703`*^9},ExpressionUUID->"830123db-6d8e-48b5-a828-\
+8bcd18bd92eb"]
+}, {2}]],
+
+Cell[TextData[{
+ "Notice the path of the green point. This is the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"cos", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e3eefb2d-a9df-4aa7-b2ac-0478cab42367"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.707744778339681*^9, 3.70774487188846*^9}, {
+  3.707745591106689*^9, 
+  3.707745591832522*^9}},ExpressionUUID->"21ea94fe-1030-4ee6-85d0-\
+647cff84a2f5"],
+
+Cell[TextData[{
+ "This path is a variation of another graph that you are familiar with. What \
+is the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"cos", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c47fd0e5-d6c2-427a-a91e-3eb3d91e77da"],
+ "?"
+}], "Item",
+ CellChangeTimes->{{3.7077448935331945`*^9, 3.7077449114222827`*^9}, {
+  3.707744998100547*^9, 3.7077450294969587`*^9}, {3.7077456051520066`*^9, 
+  3.707745618698777*^9}},ExpressionUUID->"e9cd8a61-90f1-4147-9a6e-\
+6a96a7ad1cd1"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.707471736131372*^9, 3.707471738196842*^9}, 
+   3.707563474514537*^9, 3.7076509483003273`*^9, {3.7076633738290925`*^9, 
+   3.707663374056226*^9}, {3.7076701888812675`*^9, 3.7076701890583925`*^9}},
+ Background->RGBColor[
+  1, 1, 0.85],ExpressionUUID->"f0a1efbf-b1d9-49e8-a9f1-d91b544cb10a"],
+
+Cell["Use Mathematica to confirm your answer:", "Item",
+ CellChangeTimes->{{3.707745062348538*^9, 
+  3.7077450857467546`*^9}},ExpressionUUID->"4f0324d2-44e9-4be5-b821-\
+c9a698af7c14"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.7077366414540424`*^9, 3.7077368472616377`*^9, 3.7077394489730177`*^9, {
+   3.707739546599411*^9, 3.707739571401985*^9}, 3.7077421778671217`*^9, {
+   3.707745916401127*^9, 3.7077459207573833`*^9}},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"477de4d9-fbf2-43d2-b2f9-050164dee7b7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Derivatives of tan(x), cot(x), sec(x), & csc(x)", "Section",
+ CellChangeTimes->{{3.7077456743068027`*^9, 3.707745708083396*^9}, {
+  3.7077458088442097`*^9, 
+  3.707745809117403*^9}},ExpressionUUID->"f61fb24f-29e4-40ef-96ea-\
+e9c7c8336f61"],
+
+Cell[TextData[{
+ "Use Mathematica to find the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"tan", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3468123c-aeb8-44b8-b463-f70a786f32f7"],
+ ":"
+}], "Item",
+ CellChangeTimes->{{3.707745062348538*^9, 3.7077450857467546`*^9}, {
+  3.70774576243808*^9, 
+  3.707745770423291*^9}},ExpressionUUID->"de280bdf-09ed-4fc2-8c76-\
+71f2b5a1a35d"],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"Tan", "[", "x", "]"}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.7077366414540424`*^9, 3.7077368472616377`*^9, 3.7077394489730177`*^9, {
+   3.707739546599411*^9, 3.707739571401985*^9}, 3.7077421778671217`*^9, {
+   3.7077458211020346`*^9, 3.7077458310912194`*^9}},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"eb77552c-fb59-4ed9-9c32-45cfe206afdb"],
+
+Cell[TextData[{
+ "Use Mathematica to find the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"cot", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e3dcb721-be53-4349-a2e3-4c95ffe203ba"],
+ ":"
+}], "Item",
+ CellChangeTimes->{{3.707745062348538*^9, 3.7077450857467546`*^9}, {
+  3.707745783632802*^9, 
+  3.707745795278437*^9}},ExpressionUUID->"eaa7fab1-0f0b-4582-976d-\
+f65d12b4f8c3"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.7077366414540424`*^9, 3.7077368472616377`*^9, 3.7077394489730177`*^9, {
+   3.707739546599411*^9, 3.707739571401985*^9}, 3.7077421778671217`*^9, {
+   3.707745837284011*^9, 3.7077458458937607`*^9}, 3.707745906719576*^9},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"067783f3-8171-4568-b29d-b0d8c972ddb3"],
+
+Cell[TextData[{
+ "Use Mathematica to find the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sec", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "77c4bc4a-8b01-4883-a5c4-52bb505a8ed5"],
+ ":"
+}], "Item",
+ CellChangeTimes->{{3.707745062348538*^9, 3.7077450857467546`*^9}, {
+  3.7077457863895283`*^9, 
+  3.707745799639554*^9}},ExpressionUUID->"e33105d9-cb55-4412-96e6-\
+e9f5c28cb689"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.7077366414540424`*^9, 3.7077368472616377`*^9, 3.7077394489730177`*^9, {
+   3.707739546599411*^9, 3.707739571401985*^9}, 3.7077421778671217`*^9, {
+   3.707745852058133*^9, 3.7077458613998823`*^9}, 3.7077459087715282`*^9},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"d384ecee-0df2-40a1-a780-38647612e697"],
+
+Cell[TextData[{
+ "Use Mathematica to find the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"csc", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ec5f223c-f5a1-4186-84a5-bdf4dee42302"],
+ ":"
+}], "Item",
+ CellChangeTimes->{{3.707745062348538*^9, 3.7077450857467546`*^9}, {
+  3.7077457896600857`*^9, 
+  3.7077458148931484`*^9}},ExpressionUUID->"b7da8b8d-49ec-41bf-abd0-\
+205d6ec033e3"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.7077366414540424`*^9, 3.7077368472616377`*^9, 3.7077394489730177`*^9, {
+   3.707739546599411*^9, 3.707739571401985*^9}, 3.7077421778671217`*^9, {
+   3.707745868086624*^9, 3.7077458743650837`*^9}, 3.7077459108041754`*^9},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"98045e66-286f-4907-8c6e-0a53f3e23d1d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Practice", "Section",
+ CellChangeTimes->{{3.707745979366394*^9, 
+  3.7077459806322937`*^9}},ExpressionUUID->"a1fe0917-fb33-49a8-bc8f-\
+b29faff5af2f"],
+
+Cell["\<\
+Yes, calculus student need to know these derivatives...the derivatives of \
+sine, cosine, and tangent are much more common that the other three. Notice \
+that the derivatives of the \[OpenCurlyDoubleQuote]co-functions\
+\[CloseCurlyDoubleQuote] are all negative, the others are positive.\
+\>", "Text",
+ CellChangeTimes->{{3.707745985565792*^9, 3.707746035484789*^9}, {
+  3.708013024931219*^9, 
+  3.7080130486105275`*^9}},ExpressionUUID->"9502ce95-3c08-4be0-9453-\
+82d9fc14dac2"],
+
+Cell[CellGroupData[{
+
+Cell["Problem #1", "Subsection",
+ CellChangeTimes->{{3.707746098878386*^9, 
+  3.707746105169659*^9}},ExpressionUUID->"a3aeee52-9e04-4d9e-9a54-\
+fdca6c712a34"],
+
+Cell[TextData[{
+ "If ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"h", "(", "x", ")"}], "=", 
+    RowBox[{
+     SuperscriptBox["x", "2"], 
+     RowBox[{"sin", "(", "x", ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ad799418-c576-4083-b6aa-d419cb398a96"],
+ ", find ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"h", "'"}], 
+    RowBox[{"(", "x", ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "a5aa0ba1-0dff-42b9-ae32-5c67f8f71e83"],
+ ":"
+}], "Item",
+ CellChangeTimes->{{3.707746052149972*^9, 3.7077460538862305`*^9}, {
+  3.7077490414200573`*^9, 
+  3.7077490780909357`*^9}},ExpressionUUID->"a387fc4b-2eec-4e3c-9d7b-\
+29d47a3df8b7"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.707471736131372*^9, 3.707471738196842*^9}, 
+   3.707563474514537*^9, 3.7076509483003273`*^9, {3.7076633738290925`*^9, 
+   3.707663374056226*^9}, {3.7076701888812675`*^9, 3.7076701890583925`*^9}},
+ Background->RGBColor[
+  1, 1, 0.85],ExpressionUUID->"0cfb416b-9c0d-4164-b14b-543bb63aef42"],
+
+Cell["Use Mathematica to check your answer:", "Item",
+ CellChangeTimes->{
+  3.707746052149972*^9, {3.7077490928458953`*^9, 
+   3.7077491005593314`*^9}},ExpressionUUID->"db476add-f258-4d7f-bb15-\
+f775d782b125"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.7077366414540424`*^9, 3.7077368472616377`*^9, 3.7077394489730177`*^9, {
+   3.707739546599411*^9, 3.707739571401985*^9}, 3.7077421778671217`*^9, {
+   3.707745868086624*^9, 3.7077458743650837`*^9}, 3.7077459108041754`*^9},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"4a036a92-2d42-473f-bf12-edf555642c1b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem #2", "Subsection",
+ CellChangeTimes->{{3.707746098878386*^9, 
+  3.7077461240640726`*^9}},ExpressionUUID->"7a07b507-a70e-4a9c-a7be-\
+bbfe389f6f5e"],
+
+Cell[TextData[{
+ "If ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    FractionBox[
+     RowBox[{"3", 
+      SuperscriptBox["x", "2"]}], 
+     RowBox[{"cos", "(", "x", ")"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "039821e4-43da-42c7-a7c9-9b92cddbef1d"],
+ ", find ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "'"}], 
+    RowBox[{"(", "x", ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "593f3981-e94c-4e72-ba7e-fbcc777619a7"],
+ ": "
+}], "Item",
+ CellChangeTimes->{{3.707746052149972*^9, 3.7077460538862305`*^9}, {
+  3.707749143338532*^9, 
+  3.7077491842001634`*^9}},ExpressionUUID->"afd8d887-f990-4126-ae59-\
+f3bcbb08350e"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.707471736131372*^9, 3.707471738196842*^9}, 
+   3.707563474514537*^9, 3.7076509483003273`*^9, {3.7076633738290925`*^9, 
+   3.707663374056226*^9}, {3.7076701888812675`*^9, 3.7076701890583925`*^9}},
+ Background->RGBColor[
+  1, 1, 0.85],ExpressionUUID->"900d2244-1027-4acd-8dcb-3f0521b9fbb0"],
+
+Cell["Use Mathematica to check your answer:", "Item",
+ CellChangeTimes->{3.707746052149972*^9, 
+  3.7077491070548105`*^9},ExpressionUUID->"d207dbed-e8ff-4856-a09f-\
+a5babda76a2b"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.7077366414540424`*^9, 3.7077368472616377`*^9, 3.7077394489730177`*^9, {
+   3.707739546599411*^9, 3.707739571401985*^9}, 3.7077421778671217`*^9, {
+   3.707745868086624*^9, 3.7077458743650837`*^9}, 3.7077459108041754`*^9},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"7bf31c2d-b1f5-418f-a9c4-80b6c0eef95f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem #3a", "Subsection",
+ CellChangeTimes->{{3.707746098878386*^9, 3.707746105169659*^9}, 
+   3.7077461657421513`*^9, 
+   3.7077498583248*^9},ExpressionUUID->"b6f671de-47c5-4277-b58a-542de5394034"],
+
+Cell[TextData[{
+ "A weight is suspended on the end of a spring and pulled down and released. \
+The position function for the weight is given by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"s", "(", "t", ")"}], "=", 
+    RowBox[{"5", "t", " ", 
+     RowBox[{"cos", "(", "t", ")"}]}]}], TraditionalForm]],ExpressionUUID->
+  "1a024e32-c0ba-4a3a-81d7-811412f19506"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.70774954947923*^9, 3.707749632419067*^9}, {
+  3.7077497474557076`*^9, 3.7077497542174835`*^9}, {3.707750272189788*^9, 
+  3.707750272189788*^9}},ExpressionUUID->"2a1c80bf-15a4-45d8-ac57-\
+3c7eaba59350"],
+
+Cell["Find the velocity function for the weight:", "Item",
+ CellChangeTimes->{{3.707746052149972*^9, 3.7077460538862305`*^9}, {
+  3.707749539326455*^9, 3.7077495396947155`*^9}, {3.707749700312786*^9, 
+  3.707749710941072*^9}},ExpressionUUID->"1494b2f5-3eb9-4ac3-8d82-\
+e6082d4b1368"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.707471736131372*^9, 3.707471738196842*^9}, 
+   3.707563474514537*^9, 3.7076509483003273`*^9, {3.7076633738290925`*^9, 
+   3.707663374056226*^9}, {3.7076701888812675`*^9, 3.7076701890583925`*^9}},
+ Background->RGBColor[
+  1, 1, 0.85],ExpressionUUID->"0aa5db77-ef97-4d8e-848e-1fafe88f64be"],
+
+Cell["Use Mathematica to check your answer:", "Item",
+ CellChangeTimes->{3.707746052149972*^9, 
+  3.7077491113268538`*^9},ExpressionUUID->"ab2714f7-69b0-4dff-8440-\
+f9ac0df36adb"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.7077366414540424`*^9, 3.7077368472616377`*^9, 3.7077394489730177`*^9, {
+   3.707739546599411*^9, 3.707739571401985*^9}, 3.7077421778671217`*^9, {
+   3.707745868086624*^9, 3.7077458743650837`*^9}, 3.7077459108041754`*^9},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"f356afa1-174f-4ad3-990c-56e4eed7616e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem #3b", "Subsection",
+ CellChangeTimes->{{3.707746098878386*^9, 3.707746105169659*^9}, 
+   3.7077461694379487`*^9, {3.70774986028259*^9, 
+   3.7077498618046894`*^9}},ExpressionUUID->"8d069323-3872-4b9c-9bcb-\
+5ca205cdd578"],
+
+Cell["Find the acceleration function for the weight:", "Item",
+ CellChangeTimes->{{3.707746052149972*^9, 3.7077460538862305`*^9}, {
+  3.7077497250208626`*^9, 3.7077497309980803`*^9}, {3.7077497938108487`*^9, 
+  3.707749796217293*^9}},ExpressionUUID->"935cf658-5494-43e9-a736-\
+d888f95a7ee1"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.707471736131372*^9, 3.707471738196842*^9}, 
+   3.707563474514537*^9, 3.7076509483003273`*^9, {3.7076633738290925`*^9, 
+   3.707663374056226*^9}, {3.7076701888812675`*^9, 3.7076701890583925`*^9}},
+ Background->RGBColor[
+  1, 1, 0.85],ExpressionUUID->"1df0bc64-feaa-406f-a3d3-e1cd75c913d9"],
+
+Cell["Use Mathematica to check your answer:", "Item",
+ CellChangeTimes->{3.707746052149972*^9, 
+  3.707749804031014*^9},ExpressionUUID->"4c8b3b51-ff0d-4f37-88f1-\
+acc918228cd7"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.7077366414540424`*^9, 3.7077368472616377`*^9, 3.7077394489730177`*^9, {
+   3.707739546599411*^9, 3.707739571401985*^9}, 3.7077421778671217`*^9, {
+   3.707745868086624*^9, 3.7077458743650837`*^9}, 3.7077459108041754`*^9},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"b07d3697-57b3-422a-a04e-d1d29d133e3b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem #4", "Subsection",
+ CellChangeTimes->{{3.707746098878386*^9, 3.707746105169659*^9}, 
+   3.7077461694379487`*^9, {3.70774986028259*^9, 3.7077498618046894`*^9}, 
+   3.7077506383136945`*^9},ExpressionUUID->"4440eb04-4e2a-4d5f-8418-\
+c292b847c931"],
+
+Cell[TextData[{
+ "If ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", "x", ")"}], "=", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["x", "5"], 
+      RowBox[{"sin", "(", "x", ")"}]}], 
+     RowBox[{"cos", "(", "x", ")"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "0e90b613-14bd-4cff-8d46-e12849600e72"],
+ ", find ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "'"}], 
+    RowBox[{"(", "x", ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "524564ad-d8c8-4020-8506-f36d54833d0c"],
+ ":"
+}], "Item",
+ CellChangeTimes->{{3.707746052149972*^9, 3.7077460538862305`*^9}, {
+  3.7077497250208626`*^9, 3.7077497309980803`*^9}, {3.7077497938108487`*^9, 
+  3.707749796217293*^9}, {3.707750647607718*^9, 
+  3.7077507267871203`*^9}},ExpressionUUID->"20213860-bf90-4fef-85f5-\
+cd11fcadf012"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.707471736131372*^9, 3.707471738196842*^9}, 
+   3.707563474514537*^9, 3.7076509483003273`*^9, {3.7076633738290925`*^9, 
+   3.707663374056226*^9}, {3.7076701888812675`*^9, 3.7076701890583925`*^9}},
+ Background->RGBColor[
+  1, 1, 0.85],ExpressionUUID->"dcadd528-e4e0-46f1-b080-4e702805bbe9"],
+
+Cell["Use Mathematica to check your answer:", "Item",
+ CellChangeTimes->{3.707746052149972*^9, 
+  3.707749804031014*^9},ExpressionUUID->"8624ea6c-37fc-4f7d-b0e1-\
+e5e1cd2e1096"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.7077366414540424`*^9, 3.7077368472616377`*^9, 3.7077394489730177`*^9, {
+   3.707739546599411*^9, 3.707739571401985*^9}, 3.7077421778671217`*^9, {
+   3.707745868086624*^9, 3.7077458743650837`*^9}, 3.7077459108041754`*^9},
+ Background->RGBColor[
+  0.87, 0.94, 1],ExpressionUUID->"a786a4af-8b5b-4313-bf41-9ee71475dd1a"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Authorship Information", "Section",
+ CellChangeTimes->{{3.7082515744934187`*^9, 
+  3.7082515839141483`*^9}},ExpressionUUID->"ff12f134-9433-44d0-9421-\
+fae914195d6b"],
+
+Cell["\<\
+Dan Uhlman
+uhlmand@tas.tw\
+\>", "Text",
+ CellChangeTimes->{{3.708251614008443*^9, 
+  3.7082516207586718`*^9}},ExpressionUUID->"c823c5f9-e4fe-42e4-a4e3-\
+a5720d9363b0"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1351, 1004},
+WindowMargins->{{67, Automatic}, {Automatic, 0}},
+Magnification:>2. Inherited,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 163, 3, 201, "Title", "ExpressionUUID" -> \
+"d8d974cf-0831-420f-a764-5390d7af7e4e"],
+Cell[CellGroupData[{
+Cell[768, 29, 165, 3, 140, "Section", "ExpressionUUID" -> \
+"62d0170c-cbab-4ad8-9a21-aedcc0a5048e"],
+Cell[936, 34, 907, 23, 90, "Item", "ExpressionUUID" -> \
+"779f6d47-3e76-452f-adbd-79705dae820c"],
+Cell[CellGroupData[{
+Cell[1868, 61, 2207, 60, 296, "Input", "ExpressionUUID" -> \
+"15776b8e-8fa3-4522-9adb-b1a4766d0d2f"],
+Cell[4078, 123, 3080, 66, 769, "Output", "ExpressionUUID" -> \
+"1c49e6b4-06e4-43e0-a486-6a07d120bc89"]
+}, {2}]],
+Cell[7170, 192, 397, 11, 60, "Text", "ExpressionUUID" -> \
+"b163012c-f6dc-4b4e-b2d0-bbd5e656c87b"],
+Cell[7570, 205, 465, 12, 57, "Item", "ExpressionUUID" -> \
+"f305592b-6e43-432a-88f6-be2285a7fd79"],
+Cell[8038, 219, 327, 5, 92, "Text", "ExpressionUUID" -> \
+"214aba72-8b16-4f64-8a45-e1df6c21444f"],
+Cell[8368, 226, 183, 3, 57, "Item", "ExpressionUUID" -> \
+"c0ed67e5-e816-4b71-a7f1-d27a38bcaefc"],
+Cell[8554, 231, 425, 9, 93, "Input", "ExpressionUUID" -> \
+"90c314a6-e225-4c4a-b991-fe2a5f56faf2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9016, 245, 169, 3, 140, "Section", "ExpressionUUID" -> \
+"152833cd-5811-4df9-b735-c296c5db9d11"],
+Cell[9188, 250, 958, 24, 90, "Item", "ExpressionUUID" -> \
+"0385581a-1d85-41a4-8cef-3b204a1fe9e6"],
+Cell[CellGroupData[{
+Cell[10171, 278, 2309, 62, 296, "Input", "ExpressionUUID" -> \
+"f5c24511-5fb6-4603-b1d6-abe9d05619c0"],
+Cell[12483, 342, 2989, 66, 685, "Output", "ExpressionUUID" -> \
+"830123db-6d8e-48b5-a828-8bcd18bd92eb"]
+}, {2}]],
+Cell[15484, 411, 446, 12, 60, "Text", "ExpressionUUID" -> \
+"21ea94fe-1030-4ee6-85d0-647cff84a2f5"],
+Cell[15933, 425, 536, 13, 90, "Item", "ExpressionUUID" -> \
+"e9cd8a61-90f1-4147-9a6e-6a96a7ad1cd1"],
+Cell[16472, 440, 327, 5, 92, "Text", "ExpressionUUID" -> \
+"f0a1efbf-b1d9-49e8-a9f1-d91b544cb10a"],
+Cell[16802, 447, 183, 3, 57, "Item", "ExpressionUUID" -> \
+"4f0324d2-44e9-4be5-b821-c9a698af7c14"],
+Cell[16988, 452, 343, 6, 93, "Input", "ExpressionUUID" -> \
+"477de4d9-fbf2-43d2-b2f9-050164dee7b7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17368, 463, 245, 4, 140, "Section", "ExpressionUUID" -> \
+"f61fb24f-29e4-40ef-96ea-e9c7c8336f61"],
+Cell[17616, 469, 427, 12, 57, "Item", "ExpressionUUID" -> \
+"de280bdf-09ed-4fc2-8c76-71f2b5a1a35d"],
+Cell[18046, 483, 427, 9, 93, "Input", "ExpressionUUID" -> \
+"eb77552c-fb59-4ed9-9c32-45cfe206afdb"],
+Cell[18476, 494, 428, 12, 57, "Item", "ExpressionUUID" -> \
+"eaa7fab1-0f0b-4582-976d-f65d12b4f8c3"],
+Cell[18907, 508, 365, 6, 93, "Input", "ExpressionUUID" -> \
+"067783f3-8171-4568-b29d-b0d8c972ddb3"],
+Cell[19275, 516, 430, 12, 57, "Item", "ExpressionUUID" -> \
+"e33105d9-cb55-4412-96e6-e9f5c28cb689"],
+Cell[19708, 530, 367, 6, 93, "Input", "ExpressionUUID" -> \
+"d384ecee-0df2-40a1-a780-38647612e697"],
+Cell[20078, 538, 432, 12, 57, "Item", "ExpressionUUID" -> \
+"b7da8b8d-49ec-41bf-abd0-205d6ec033e3"],
+Cell[20513, 552, 367, 6, 93, "Input", "ExpressionUUID" -> \
+"98045e66-286f-4907-8c6e-0a53f3e23d1d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20917, 563, 155, 3, 140, "Section", "ExpressionUUID" -> \
+"a1fe0917-fb33-49a8-bc8f-b29faff5af2f"],
+Cell[21075, 568, 487, 9, 136, "Text", "ExpressionUUID" -> \
+"9502ce95-3c08-4be0-9453-82d9fc14dac2"],
+Cell[CellGroupData[{
+Cell[21587, 581, 158, 3, 95, "Subsection", "ExpressionUUID" -> \
+"a3aeee52-9e04-4d9e-9a54-fdca6c712a34"],
+Cell[21748, 586, 713, 24, 59, "Item", "ExpressionUUID" -> \
+"a387fc4b-2eec-4e3c-9d7b-29d47a3df8b7"],
+Cell[22464, 612, 327, 5, 92, "Text", "ExpressionUUID" -> \
+"0cfb416b-9c0d-4164-b14b-543bb63aef42"],
+Cell[22794, 619, 209, 4, 57, "Item", "ExpressionUUID" -> \
+"db476add-f258-4d7f-bb15-f775d782b125"],
+Cell[23006, 625, 367, 6, 93, "Input", "ExpressionUUID" -> \
+"4a036a92-2d42-473f-bf12-edf555642c1b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23410, 636, 160, 3, 95, "Subsection", "ExpressionUUID" -> \
+"7a07b507-a70e-4a9c-a7be-bbfe389f6f5e"],
+Cell[23573, 641, 737, 25, 81, "Item", "ExpressionUUID" -> \
+"afd8d887-f990-4126-ae59-f3bcbb08350e"],
+Cell[24313, 668, 327, 5, 92, "Text", "ExpressionUUID" -> \
+"900d2244-1027-4acd-8dcb-3f0521b9fbb0"],
+Cell[24643, 675, 179, 3, 57, "Item", "ExpressionUUID" -> \
+"d207dbed-e8ff-4856-a09f-a5babda76a2b"],
+Cell[24825, 680, 367, 6, 93, "Input", "ExpressionUUID" -> \
+"7bf31c2d-b1f5-418f-a9c4-80b6c0eef95f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25229, 691, 206, 3, 95, "Subsection", "ExpressionUUID" -> \
+"b6f671de-47c5-4277-b58a-542de5394034"],
+Cell[25438, 696, 612, 15, 98, "Text", "ExpressionUUID" -> \
+"2a1c80bf-15a4-45d8-ac57-3c7eaba59350"],
+Cell[26053, 713, 283, 4, 57, "Item", "ExpressionUUID" -> \
+"1494b2f5-3eb9-4ac3-8d82-e6082d4b1368"],
+Cell[26339, 719, 327, 5, 92, "Text", "ExpressionUUID" -> \
+"0aa5db77-ef97-4d8e-848e-1fafe88f64be"],
+Cell[26669, 726, 179, 3, 57, "Item", "ExpressionUUID" -> \
+"ab2714f7-69b0-4dff-8440-f9ac0df36adb"],
+Cell[26851, 731, 367, 6, 93, "Input", "ExpressionUUID" -> \
+"f356afa1-174f-4ad3-990c-56e4eed7616e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27255, 742, 235, 4, 95, "Subsection", "ExpressionUUID" -> \
+"8d069323-3872-4b9c-9bcb-5ca205cdd578"],
+Cell[27493, 748, 291, 4, 57, "Item", "ExpressionUUID" -> \
+"935cf658-5494-43e9-a736-d888f95a7ee1"],
+Cell[27787, 754, 327, 5, 92, "Text", "ExpressionUUID" -> \
+"1df0bc64-feaa-406f-a3d3-e1cd75c913d9"],
+Cell[28117, 761, 177, 3, 57, "Item", "ExpressionUUID" -> \
+"4c8b3b51-ff0d-4f37-88f1-acc918228cd7"],
+Cell[28297, 766, 367, 6, 93, "Input", "ExpressionUUID" -> \
+"b07d3697-57b3-422a-a04e-d1d29d133e3b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28701, 777, 258, 4, 95, "Subsection", "ExpressionUUID" -> \
+"4440eb04-4e2a-4d5f-8418-c292b847c931"],
+Cell[28962, 783, 871, 27, 83, "Item", "ExpressionUUID" -> \
+"20213860-bf90-4fef-85f5-cd11fcadf012"],
+Cell[29836, 812, 327, 5, 92, "Text", "ExpressionUUID" -> \
+"dcadd528-e4e0-46f1-b080-4e702805bbe9"],
+Cell[30166, 819, 177, 3, 57, "Item", "ExpressionUUID" -> \
+"8624ea6c-37fc-4f7d-b0e1-e5e1cd2e1096"],
+Cell[30346, 824, 367, 6, 93, "Input", "ExpressionUUID" -> \
+"a786a4af-8b5b-4313-bf41-9ee71475dd1a"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30762, 836, 171, 3, 140, "Section", "ExpressionUUID" -> \
+"ff12f134-9433-44d0-9421-fae914195d6b"],
+Cell[30936, 841, 177, 6, 98, "Text", "ExpressionUUID" -> \
+"c823c5f9-e4fe-42e4-a4e3-a5720d9363b0"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
